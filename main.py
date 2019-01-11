@@ -21,6 +21,6 @@ if response.status_code == 200:
     document = etree.fromstring(response.text.encode("utf-8"))
     print(document.xpath(
         "//ymps:GeoObjectCollection/gml:featureMember[1]/ymps:GeoObject/"
-        "gml: metaDataProperty/geo: GeocoderMetaData/geo: text/text()",
+        "gml:metaDataProperty/geo:GeocoderMetaData/geo:text/text()",
         namespaces=nsmap
     )[0])
